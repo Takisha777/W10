@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>probe</title>
+        <style>
+            .hiddenBlock {
+                border: 1px solid black;
+                background: rgb(13,111,14);
+                background: linear-gradient(0deg, rgba(13,111,14,1) 0%, rgba(9,121,21,1) 45%, rgba(232,252,0,1) 55%, rgba(232,252,0,1) 70%, rgba(252,0,0,1) 80%);
+                width: 50px;
+                height: 100px;
+                position: absolute;
+                z-index: -1;
+                overflow: hidden;
+            }
+            .mask {
+                width: 50px;
+                height: 100px;
+                background-color: snow;
+                position: absolute;
+                border: 1px solid black;
+            }
+            input[type=range] {
+                -webkit-appearance: none;
+                border-radius: 8px;
+                height: 7px;
+                border: 1px solid #416bf1;
+                background-color: #fff;
+            }
+            input[type='range']::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                background-color: #416bf1;
+                border: 1px solid #416bf1;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="range" name="range" id="range" min="0" max="100">
+        <input type="number" id="text">
+        <div class="hiddenBlock"></div>
+        <div class="mask"></div>
+        <script src="task.js"></script>
+    </body>
 </html>
