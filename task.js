@@ -9,21 +9,21 @@
 window.onload = function () {
     let range = document.querySelector("#range");
     let mask = document.querySelector(".mask");
-    let text = document.querySelector("#text");
+    let number = document.querySelector("#number");
     range.addEventListener("mousedown", function () {
         this.addEventListener("mousemove", move);
     });
     function move() {
         mask.style.height = (100-range.value) + 'px';
-        document.getElementById("text").value = range.value;
+        document.getElementById("number").value = range.value;
     }
 
-    text.addEventListener("keyup", function () {
-        if (text.value > 100){
-            text.value = 100;
+    number.addEventListener("keyup", function () {
+        if (number.value > 100){
+            number.value = 100;
         }
-        mask.style.height = (100 - text.value) + 'px';
-        document.getElementById("range").value = text.value;
+        mask.style.height = (100 - number.value) + 'px';
+        document.getElementById("range").value = number.value;
     })
 };
 
